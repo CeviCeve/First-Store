@@ -30,6 +30,9 @@ public final class ActivitySecondLayerCourseBinding implements ViewBinding {
   public final ImageView bg2;
 
   @NonNull
+  public final TextView cache;
+
+  @NonNull
   public final TextView courseData;
 
   @NonNull
@@ -56,19 +59,17 @@ public final class ActivitySecondLayerCourseBinding implements ViewBinding {
   @NonNull
   public final TextView textView26;
 
-  @NonNull
-  public final TextView textView4;
-
   private ActivitySecondLayerCourseBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageView Star, @NonNull TextView bg1, @NonNull ImageView bg2,
-      @NonNull TextView courseData, @NonNull TextView courseLevel, @NonNull TextView courseSale,
-      @NonNull ImageView imageView10, @NonNull ImageView imageView15, @NonNull ImageView imageView8,
-      @NonNull TextView textView23, @NonNull TextView textView24, @NonNull TextView textView26,
-      @NonNull TextView textView4) {
+      @NonNull TextView cache, @NonNull TextView courseData, @NonNull TextView courseLevel,
+      @NonNull TextView courseSale, @NonNull ImageView imageView10, @NonNull ImageView imageView15,
+      @NonNull ImageView imageView8, @NonNull TextView textView23, @NonNull TextView textView24,
+      @NonNull TextView textView26) {
     this.rootView = rootView;
     this.Star = Star;
     this.bg1 = bg1;
     this.bg2 = bg2;
+    this.cache = cache;
     this.courseData = courseData;
     this.courseLevel = courseLevel;
     this.courseSale = courseSale;
@@ -78,7 +79,6 @@ public final class ActivitySecondLayerCourseBinding implements ViewBinding {
     this.textView23 = textView23;
     this.textView24 = textView24;
     this.textView26 = textView26;
-    this.textView4 = textView4;
   }
 
   @Override
@@ -123,6 +123,12 @@ public final class ActivitySecondLayerCourseBinding implements ViewBinding {
       id = R.id.bg2;
       ImageView bg2 = ViewBindings.findChildViewById(rootView, id);
       if (bg2 == null) {
+        break missingId;
+      }
+
+      id = R.id.cache;
+      TextView cache = ViewBindings.findChildViewById(rootView, id);
+      if (cache == null) {
         break missingId;
       }
 
@@ -180,15 +186,9 @@ public final class ActivitySecondLayerCourseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView4;
-      TextView textView4 = ViewBindings.findChildViewById(rootView, id);
-      if (textView4 == null) {
-        break missingId;
-      }
-
       return new ActivitySecondLayerCourseBinding((ConstraintLayout) rootView, Star, bg1, bg2,
-          courseData, courseLevel, courseSale, imageView10, imageView15, imageView8, textView23,
-          textView24, textView26, textView4);
+          cache, courseData, courseLevel, courseSale, imageView10, imageView15, imageView8,
+          textView23, textView24, textView26);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

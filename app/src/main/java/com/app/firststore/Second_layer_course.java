@@ -54,6 +54,9 @@ public class Second_layer_course extends AppCompatActivity {
         sale_ = getIntent().getStringExtra("courseSale");;
         text_ = getIntent().getStringExtra("courseText");;
 
+        TextView textView = findViewById(R.id.cache);
+        MainActivity.money(textView);
+
     }
 
     //----в избранное----//

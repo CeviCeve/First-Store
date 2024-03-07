@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -17,6 +18,9 @@ public class FourthLayer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth_layer);
+
+        TextView textView = findViewById(R.id.cache);
+        MainActivity.money(textView);
     }
     //------------------------нижнее меню------------------------//
     //----переход к главному меню----//

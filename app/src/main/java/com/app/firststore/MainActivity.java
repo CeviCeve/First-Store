@@ -15,6 +15,7 @@ import com.app.firststore.Adapters.CategoryAdapter;
 import com.app.firststore.Adapters.CourseAdapter;
 import com.app.firststore.Model.Category;
 import com.app.firststore.Model.Course;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     static CourseAdapter courseAdapter;
     static List<Course> courseList = new ArrayList<>();
     static List<Course> fullList = new ArrayList<>();
+    static List<Course> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,20 +79,26 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef1 = firebaseDatabase.getReference("Course");
         myRef1.push().setValue(new Course(1, String.valueOf(course1) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, a1, 2));
 */
+        TextView textView = findViewById(R.id.cache);
+
         FirebaseDatabase rootRef = FirebaseDatabase.getInstance();
         DatabaseReference myRef = rootRef.getReference("Course");
 
         ValueEventListener valueEventListener = new ValueEventListener() { //реакция на изменение бд
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                List<Course> list = new ArrayList<>();
+                //List<Course> list = new ArrayList<>();
+                fullList.clear();
                 for(DataSnapshot ds : dataSnapshot.getChildren()) {
                     Log.d("fbAdd", ds.getValue().toString());
                     Course c = ds.getValue(Course.class);
                     list.add(c);
                 }
-                setCourseRecycler(list);
 
+                fullList.addAll(list);
+                courseList.addAll(list);
+                setCourseRecycler(courseList);
+                money(textView);
                 //Do what you need to do with your list
             }
 
@@ -102,7 +110,29 @@ public class MainActivity extends AppCompatActivity {
         myRef.addValueEventListener(valueEventListener);
     }
 
+    //----покаазывать кошелек----//
+public static void money(TextView textView)
+{
+    String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("Users//" + userId + "/balance");
 
+    myRef.addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(DataSnapshot dataSnapshot) {
+            Integer value = dataSnapshot.getValue(Integer.class);
+            // теперь у вас есть значение из Firebase
+
+            //TextView textView = (TextView) findViewById(R.id.my_textview);
+            textView.setText(String.valueOf(value)+" р");
+        }
+
+        @Override
+        public void onCancelled(DatabaseError error) {
+            // обработка ошибок
+        }
+    });
+}
 
     //----переход к избранному----//
     public void openSecond(View view){
@@ -115,6 +145,11 @@ public class MainActivity extends AppCompatActivity {
     public void reset(View view){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef1 = firebaseDatabase.getReference("Course");
+        myRef1.push().setValue(new Course(1, "200","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
+        myRef1.push().setValue(new Course(2, "150","Разработка приложений на Java", "Качественно\nДоступно" ,"Начинающий",R.drawable.gradient_4, "a1",3));
+        myRef1.push().setValue(new Course(3, "310","Unity для чайников", "Доступно" ,"Начинающий",R.drawable.gradient_5, "a1",1));
+        myRef1.push().setValue(new Course(4, "666","Разработка приложений на петухоне", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_2, "a1",3));
+        myRef1.push().setValue(new Course(5, "200","UnrealEngine 5 с помощью C++", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_1, "a1",1));
         myRef1.push().setValue(new Course(1, "200","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
 
     }

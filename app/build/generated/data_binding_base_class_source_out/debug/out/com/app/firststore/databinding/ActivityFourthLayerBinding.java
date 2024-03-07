@@ -24,6 +24,9 @@ public final class ActivityFourthLayerBinding implements ViewBinding {
   public final TextView UserName;
 
   @NonNull
+  public final TextView cache;
+
+  @NonNull
   public final ConstraintLayout constraintLayout;
 
   @NonNull
@@ -53,16 +56,14 @@ public final class ActivityFourthLayerBinding implements ViewBinding {
   @NonNull
   public final ImageView imageView9;
 
-  @NonNull
-  public final TextView textView4;
-
   private ActivityFourthLayerBinding(@NonNull ConstraintLayout rootView, @NonNull TextView UserName,
-      @NonNull ConstraintLayout constraintLayout, @NonNull ImageView imageView,
-      @NonNull ImageView imageView11, @NonNull ImageView imageView12, @NonNull ImageView imageView4,
-      @NonNull ImageView imageView5, @NonNull ImageView imageView6, @NonNull ImageView imageView7,
-      @NonNull ImageView imageView8, @NonNull ImageView imageView9, @NonNull TextView textView4) {
+      @NonNull TextView cache, @NonNull ConstraintLayout constraintLayout,
+      @NonNull ImageView imageView, @NonNull ImageView imageView11, @NonNull ImageView imageView12,
+      @NonNull ImageView imageView4, @NonNull ImageView imageView5, @NonNull ImageView imageView6,
+      @NonNull ImageView imageView7, @NonNull ImageView imageView8, @NonNull ImageView imageView9) {
     this.rootView = rootView;
     this.UserName = UserName;
+    this.cache = cache;
     this.constraintLayout = constraintLayout;
     this.imageView = imageView;
     this.imageView11 = imageView11;
@@ -73,7 +74,6 @@ public final class ActivityFourthLayerBinding implements ViewBinding {
     this.imageView7 = imageView7;
     this.imageView8 = imageView8;
     this.imageView9 = imageView9;
-    this.textView4 = textView4;
   }
 
   @Override
@@ -106,6 +106,12 @@ public final class ActivityFourthLayerBinding implements ViewBinding {
       id = R.id.UserName;
       TextView UserName = ViewBindings.findChildViewById(rootView, id);
       if (UserName == null) {
+        break missingId;
+      }
+
+      id = R.id.cache;
+      TextView cache = ViewBindings.findChildViewById(rootView, id);
+      if (cache == null) {
         break missingId;
       }
 
@@ -169,15 +175,9 @@ public final class ActivityFourthLayerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView4;
-      TextView textView4 = ViewBindings.findChildViewById(rootView, id);
-      if (textView4 == null) {
-        break missingId;
-      }
-
-      return new ActivityFourthLayerBinding((ConstraintLayout) rootView, UserName, constraintLayout,
-          imageView, imageView11, imageView12, imageView4, imageView5, imageView6, imageView7,
-          imageView8, imageView9, textView4);
+      return new ActivityFourthLayerBinding((ConstraintLayout) rootView, UserName, cache,
+          constraintLayout, imageView, imageView11, imageView12, imageView4, imageView5, imageView6,
+          imageView7, imageView8, imageView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

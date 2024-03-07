@@ -113,7 +113,7 @@
             app:srcCompat="@drawable/balance" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/cache"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/byn"
