@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/rowdies</item>
+        <item>@font/rowdies_bold</item>
+        <item>@font/ruda</item>
+        <item>@font/ruda_black</item>
+        <item>@font/ruda_bold</item>
+        <item>@font/ubuntu_light</item>
+    </array>
+</resources>

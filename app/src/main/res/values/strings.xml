@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">First Store</string>
+    <string name="byn">BYN</string>
+
+    <string name="courseLevel">Уровень:</string>
+    <string name="sale">Цена:</string>
+
+    <string name="favourites">Избранное</string>
+    <string name="experts">Эксперты</string>
+    <string name="myCourses">Мои курсы</string>
+    <string name="giveMoney">Пополнить счет</string>
+    <string name="account">Аккаунт</string>
+    <string name="Entrance">Вход в аккаунт</string>
+    <string name="Registration">Регистрация</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="realEntrance">Войти</string>
+    <string name="notAcc">Нет аккаунта?</string>
+    <string name="reg">Зарегистрируйся!</string>
+    <string name="realReg">Зарегистрироваться</string>
+
+    <string name="cardNumber">Номер карты</string>
+    <string name="Date">Срок годности</string>
+    <string name="numder3">3 цифры</string>
+    <string name="Sum">Сумма ввода</string>
+    <string name="Transfer">Пополнить</string>
+
+    <string name="userName">User name</string>
+    <string name="pochta">Почта</string>
+    <string name="status">Статус</string>
+    <string name="numCourse">Куплено курсов</string>
+    <string name="personalSale">Персональная скидка</string>
+
+    <string name="buy">Купить</string>
+    <string name="buyTrue">Куплено</string>
+
+</resources>
