@@ -1,18 +1,8 @@
 package com.app.firststore.Model;
 
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 public class UserData {
-     int balance;
-     String email, username, profileImage;
+     int balance, numCourses;
+     String email, username, profileImage, status;
 
 
      public UserData(int balance){
@@ -20,12 +10,22 @@ public class UserData {
      }
 
 
-    public UserData(int balance, String email, String username, String profileImage) {
+    public UserData(int balance, String email, String username, String profileImage, String status, int numCourses) {
         this.balance = balance;
         this.email = email;
         this.username = username;
         this.profileImage = profileImage;
+        this.status = status;
+        this.numCourses = numCourses;
     }
+
+    public int getNumCourses() {return numCourses;}
+
+    public void setNumCourses(int numCourses) {this.numCourses = numCourses;}
+
+    public String getStatus() {return status;}
+
+    public void setStatus(String status) {this.status = status;}
 
     public int getBalance() {
         return balance;

@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ThirdLayer extends AppCompatActivity {
 
@@ -21,10 +24,18 @@ public class ThirdLayer extends AppCompatActivity {
     }
     //----переход к избранному----//
     public void openSecond(View view){
-        finish();
-        Intent intent = new Intent(this, SecondLayer.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        if(FirebaseAuth.getInstance().getCurrentUser() != null)
+        {
+            finish();
+            Intent intent = new Intent(this, SecondLayer.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        } else {
+            Toast.makeText(getApplicationContext(), "Пройдите регистрацию", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Fourth_layer_Entrance.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
     }
     //----переход к ЛК----//
     public void openFourth(View view){

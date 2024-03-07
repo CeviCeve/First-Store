@@ -3524,6 +3524,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numCourses
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3557,6 +3558,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pochta
 id position
 id postLayout
 id pressed
@@ -3631,6 +3633,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status
 id stop
 id stretch
 id submenuarrow
@@ -3665,12 +3668,9 @@ id textView12
 id textView13
 id textView14
 id textView15
-id textView16
 id textView17
-id textView18
 id textView19
 id textView2
-id textView20
 id textView21
 id textView23
 id textView24

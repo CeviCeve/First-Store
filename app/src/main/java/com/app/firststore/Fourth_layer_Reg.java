@@ -57,7 +57,12 @@ public class Fourth_layer_Reg extends AppCompatActivity {
                                         //FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(userInfo);
 
                                         DatabaseReference myRef1 = firebaseDatabase.getReference("Users//"+userId);
-                                        myRef1.setValue(new UserData(1, binding.email.getText().toString(),binding.login.getText().toString() ,""));
+                                        String status = "text";
+                                        if(!binding.email.getText().toString().equals("text@text.com")) status="пользователь";
+                                        else status="администратор";
+
+
+                                        myRef1.setValue(new UserData(1, binding.email.getText().toString(),binding.login.getText().toString() ,"", status.toString(),0));
                                         finish();
                                         //startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                     }

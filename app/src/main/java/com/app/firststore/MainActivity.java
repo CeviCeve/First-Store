@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.firststore.Adapters.CategoryAdapter;
 import com.app.firststore.Adapters.CourseAdapter;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+       // FirebaseAuth.getInstance().signOut();//<-- выход из аккаунта
 
         Log.d("fbAdd", "ds.getValue().toString()");
 
@@ -113,33 +116,45 @@ public class MainActivity extends AppCompatActivity {
     //----покаазывать кошелек----//
 public static void money(TextView textView)
 {
-    String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("Users//" + userId + "/balance");
+    if(FirebaseAuth.getInstance().getCurrentUser() != null)
+    {
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Users//" + userId + "/balance");
 
-    myRef.addValueEventListener(new ValueEventListener() {
-        @Override
-        public void onDataChange(DataSnapshot dataSnapshot) {
-            Integer value = dataSnapshot.getValue(Integer.class);
-            // теперь у вас есть значение из Firebase
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Integer value = dataSnapshot.getValue(Integer.class);
+                // теперь у вас есть значение из Firebase
 
-            //TextView textView = (TextView) findViewById(R.id.my_textview);
-            textView.setText(String.valueOf(value)+" р");
-        }
+                //TextView textView = (TextView) findViewById(R.id.my_textview);
+                textView.setText(String.valueOf(value)+" р");
+            }
 
-        @Override
-        public void onCancelled(DatabaseError error) {
-            // обработка ошибок
-        }
-    });
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // обработка ошибок
+            }
+        });
+    }
+
+
 }
 
     //----переход к избранному----//
     public void openSecond(View view){
-
+        if(FirebaseAuth.getInstance().getCurrentUser() != null)
+        {
         Intent intent = new Intent(this, SecondLayer.class);
         startActivity(intent);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        } else {
+            Toast.makeText(getApplicationContext(), "Пройдите регистрацию", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Fourth_layer_Entrance.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
     }
 
     public void reset(View view){

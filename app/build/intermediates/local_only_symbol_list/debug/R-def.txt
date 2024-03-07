@@ -89,9 +89,13 @@ id imageView8
 id imageView9
 id login
 id loginBtn
+id numCourses
 id password
+id percent
+id pochta
 id recyclerCourse
 id regBtn
+id status
 id text1
 id textView
 id textView10
@@ -100,12 +104,9 @@ id textView12
 id textView13
 id textView14
 id textView15
-id textView16
 id textView17
-id textView18
 id textView19
 id textView2
-id textView20
 id textView21
 id textView23
 id textView24

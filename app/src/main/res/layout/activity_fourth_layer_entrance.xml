@@ -79,6 +79,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/realEntrance"
+        android:textColor="@color/white"
         android:fontFamily="@font/ruda"
         android:textSize="17sp"/>
 
