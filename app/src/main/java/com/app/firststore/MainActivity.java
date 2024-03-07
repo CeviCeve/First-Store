@@ -7,21 +7,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.app.firststore.Adapters.CacheMashine;
 import com.app.firststore.Adapters.CategoryAdapter;
 import com.app.firststore.Adapters.CourseAdapter;
 import com.app.firststore.Model.Category;
 import com.app.firststore.Model.Course;
-import com.app.firststore.Repository.Courses_repository;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.SignInMethodQueryResult;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Log.d("fbAdd", "ds.getValue().toString()");
 
 
         //startActivities(new Intent(this, Fourth_layer_money.class));
@@ -63,30 +61,62 @@ public class MainActivity extends AppCompatActivity {
         int course5=500;
 
 
-        TextView textView = findViewById(R.id.cache);
-        textView.setText(CacheMashine.setCache());
+
 
         String a1 = "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems. Разработка ведётся сообществом, организованным через Java Community Process; язык и основные реализующие его технологии распространяются по лицензии GPL.";
 
-        courseList.add(new Course(1, String.valueOf(course1) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, a1, 2));
+        /*courseList.add(new Course(1, String.valueOf(course1) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, a1, 2));
         courseList.add(new Course(2, String.valueOf(course2) + " BYN","Разработка приложений на Java", "Качественно\nДоступно" ,"Начинающий",R.drawable.gradient_4, a1,3));
         courseList.add(new Course(3, String.valueOf(course3) + " BYN","Unity для чайников", "Доступно" ,"Начинающий",R.drawable.gradient_5, a1,1));
         courseList.add(new Course(4, String.valueOf(course4) + " BYN","Разработка приложений на петухоне", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_2, a1,3));
         courseList.add(new Course(5, String.valueOf(course5) + " BYN","UnrealEngine 5 с помощью C++", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_1, a1,1));
 
-        fullList.addAll(courseList);
+        fullList.addAll(courseList);*/
 
-        setCourseRecycler(courseList);
+        /*FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef1 = firebaseDatabase.getReference("Course");
+        myRef1.push().setValue(new Course(1, String.valueOf(course1) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, a1, 2));
+*/
+        FirebaseDatabase rootRef = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = rootRef.getReference("Course");
+
+        ValueEventListener valueEventListener = new ValueEventListener() { //реакция на изменение бд
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<Course> list = new ArrayList<>();
+                for(DataSnapshot ds : dataSnapshot.getChildren()) {
+                    Log.d("fbAdd", ds.getValue().toString());
+                    Course c = ds.getValue(Course.class);
+                    list.add(c);
+                }
+                setCourseRecycler(list);
+
+                //Do what you need to do with your list
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) { // реакция если ошибка
+                Log.d("EEROR", databaseError.getMessage()); //Don't ignore errors!
+            }
+        };
+        myRef.addValueEventListener(valueEventListener);
     }
+
+
 
     //----переход к избранному----//
     public void openSecond(View view){
-        TextView textView = findViewById(R.id.cache);
-        textView.setText(CacheMashine.setCache());
 
         Intent intent = new Intent(this, SecondLayer.class);
         startActivity(intent);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
+    public void reset(View view){
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef1 = firebaseDatabase.getReference("Course");
+        myRef1.push().setValue(new Course(1, "200","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
+
     }
     //----переход к чатам----//
     public void openThird(View view){

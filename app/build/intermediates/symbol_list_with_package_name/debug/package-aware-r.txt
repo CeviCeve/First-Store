@@ -3270,6 +3270,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id bucketList
+id button
 id buttonPanel
 id cache
 id cache_measures

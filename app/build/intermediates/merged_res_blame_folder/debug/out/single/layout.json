@@ -32,10 +32,6 @@
         "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_my_courses.xml"
     },
     {
-        "merged": "com.app.firststore.app-mergeDebugResources-38:/layout/activity_second_layer.xml",
-        "source": "com.app.firststore.app-main-41:/layout/activity_second_layer.xml"
-    },
-    {
         "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer_reg_update.xml",
         "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_reg_update.xml"
     },
@@ -54,5 +50,9 @@
     {
         "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_therd_layer.xml",
         "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_therd_layer.xml"
+    },
+    {
+        "merged": "com.app.firststore.app-mergeDebugResources-38:/layout/activity_main.xml",
+        "source": "com.app.firststore.app-main-41:/layout/activity_main.xml"
     }
 ]

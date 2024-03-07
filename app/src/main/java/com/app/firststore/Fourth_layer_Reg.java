@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 
+import com.app.firststore.Model.UserData;
 import com.app.firststore.databinding.ActivityFourthLayerBinding;
 import com.app.firststore.databinding.ActivityFourthLayerRegBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -42,21 +44,25 @@ public class Fourth_layer_Reg extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
-                                        HashMap<String, String> userInfo = new HashMap<>();
+                                        /*HashMap<String, String> userInfo = new HashMap<>();
                                         userInfo.put("email", binding.email.getText().toString());
                                         userInfo.put("username", binding.login.getText().toString());
                                         userInfo.put("profileImage", "");
-                                        userInfo.put("chats", "");
+                                        userInfo.put("balance", "0");*/
 
-                                        FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                                .setValue(userInfo);
 
+                                        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                                        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+
+                                        //FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(userInfo);
+
+                                        DatabaseReference myRef1 = firebaseDatabase.getReference("Users//"+userId);
+                                        myRef1.setValue(new UserData(1, binding.email.getText().toString(),binding.login.getText().toString() ,""));
                                         finish();
                                         //startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                     }
                                 }
                             });
-
                 }
             }
         });

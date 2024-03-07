@@ -1,17 +1,25 @@
 package com.app.firststore;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.app.firststore.Adapters.CacheMashine;
 import com.app.firststore.Adapters.DataValidator;
-
-import org.checkerframework.checker.signedness.qual.Unsigned;
+import com.app.firststore.Model.UserData;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
+import com.google.firebase.database.ValueEventListener;
 
 public class Fourth_layer_money extends AppCompatActivity {
 
@@ -43,13 +51,43 @@ public class Fourth_layer_money extends AppCompatActivity {
                 int value4 = Integer.parseInt(field4.getText().toString());*/
 
                 if (DataValidator.isValid(value1, value2, value3, value3_1, value4)) {
+
                     // Данные валидны
-                    int a = Integer.parseInt(value4);
-                    CacheMashine.getCache(a);
+                    int newCache = Integer.parseInt(value4);
                     Toast.makeText(getApplicationContext(), "Cчет пополнен", Toast.LENGTH_SHORT).show();
+
+                    String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+
+                    //сумма для бд-------------------
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference balanceRef = database.getReference("Users//"+userId+"/balance");
+                    balanceRef.runTransaction(new Transaction.Handler() {
+                        @Override
+                        public Transaction.Result doTransaction(MutableData mutableData) {
+                            Integer currentValue = mutableData.getValue(Integer.class);
+                            if (currentValue == null) {
+                                mutableData.setValue(newCache); // myNumber - ваша числовая переменная
+                            } else {
+                                mutableData.setValue(currentValue + newCache);
+                            }
+
+                            return Transaction.success(mutableData);
+                        }
+
+                        @Override
+                        public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+                            // Обработка ошибок
+                        }
+                    });
+                    //-------------------------------
+
+
+                    finish();
+
                 } else {
                     // Данные невалидны
-                    Toast.makeText(getApplicationContext(), "Данные невалидны", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Данные введены с ошибкой", Toast.LENGTH_SHORT).show();
                 }
             }
         });
