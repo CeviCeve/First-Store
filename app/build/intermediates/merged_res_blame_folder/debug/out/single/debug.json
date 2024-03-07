@@ -1,0 +1,262 @@
+[
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_gradient_5.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\gradient_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_ava.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\ava.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_second_layer_course.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_second_layer_course.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_star.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\star.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_course_item.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\course_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_fourth_layer.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\font_ruda.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\font\\ruda.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_gradient_1.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\gradient_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_back.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\back.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_second_layer.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_second_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_fourth_layer_my_courses.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_my_courses.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_fourth_layer_reg_update.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_reg_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_account.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\account.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_radius_button.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\radius_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_gradient_2.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\gradient_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_staractiveall.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\staractiveall.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_courses.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\courses.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_smsactive.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\smsactive.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_category_item.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\category_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_therd_layer.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_therd_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_balance.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\balance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_button_buy.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\button_buy.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_starwhite.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\starwhite.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_money__2_.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\money__2_.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_sms.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\sms.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\font_ruda_black.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\font\\ruda_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_gradient_3.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\gradient_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_what.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\what.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_useractive.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\useractive.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_user.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\font_rowdies_bold.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\font\\rowdies_bold.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_gradient_6.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\gradient_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_category.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\category.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_activehome.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\activehome.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\font_ruda_bold.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\font\\ruda_bold.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_gradient_4.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\gradient_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\font_rowdies.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\font\\rowdies.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_fourth_layer_entrance.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_entrance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_home.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\font_ubuntu_light.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\font\\ubuntu_light.xml"
+    },
+    {
+        "merged": "com.app.firststore.app-merged_res-39:/layout_activity_second_layer.xml.flat",
+        "source": "com.app.firststore.app-main-41:/layout/activity_second_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_fourth_layer_money.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_money.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_fourth_layer_account.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_staractive.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\staractive.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\drawable_radius.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\drawable\\radius.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-merged_res-39:\\layout_activity_fourth_layer_reg.xml.flat",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_reg.xml"
+    }
+]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://cevicevi-5163a-default-rtdb.europe-west1.firebasedatabase.app/</string>
+    <string name="gcm_defaultSenderId" translatable="false">480638089496</string>
+    <string name="google_api_key" translatable="false">AIzaSyCZEOlrJ2nOPd-jKV1f55BK3zOeN0Ox-ZI</string>
+    <string name="google_app_id" translatable="false">1:480638089496:android:9b91537563dabffd99066d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCZEOlrJ2nOPd-jKV1f55BK3zOeN0Ox-ZI</string>
+    <string name="google_storage_bucket" translatable="false">cevicevi-5163a.appspot.com</string>
+    <string name="project_id" translatable="false">cevicevi-5163a</string>
+</resources>

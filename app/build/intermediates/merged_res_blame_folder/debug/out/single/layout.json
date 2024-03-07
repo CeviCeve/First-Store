@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_second_layer.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_second_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer_account.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\course_item.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\course_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer_money.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_money.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer_entrance.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_entrance.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_second_layer_course.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_second_layer_course.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer_my_courses.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_my_courses.xml"
+    },
+    {
+        "merged": "com.app.firststore.app-mergeDebugResources-38:/layout/activity_second_layer.xml",
+        "source": "com.app.firststore.app-main-41:/layout/activity_second_layer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer_reg_update.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_reg_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\category_item.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\category_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_fourth_layer_reg.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_fourth_layer_reg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-mergeDebugResources-38:\\layout\\activity_therd_layer.xml",
+        "source": "C:\\Users\\Professional\\.gradle\\daemon\\8.2\\com.app.firststore.app-main-41:\\layout\\activity_therd_layer.xml"
+    }
+]
