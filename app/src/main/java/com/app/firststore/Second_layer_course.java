@@ -20,6 +20,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Second_layer_course extends AppCompatActivity {
 
+    int id_, color_, category_;
+    String title_;
+    String data_;
+    String level_;
+    String sale_;
+    String text_;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,24 +47,42 @@ public class Second_layer_course extends AppCompatActivity {
         sale.setText(getIntent().getStringExtra("courseSale"));
         Data.setText(getIntent().getStringExtra("courseText"));
 
+        id_ = getIntent().getIntExtra("courseId", 1);
+        title_ = getIntent().getStringExtra("courseTitle");
+        data_ = getIntent().getStringExtra("courseText");
+        level_ = getIntent().getStringExtra("courseLevel");;
+        sale_ = getIntent().getStringExtra("courseSale");;
+        text_ = getIntent().getStringExtra("courseText");;
+
     }
 
     //----в избранное----//
     public void addToCard(View view){
 
-        ImageView star = findViewById(R.id.Star);
-        star.setImageResource(R.drawable.staractiveall);
-        Toast.makeText(getApplicationContext(), "Добавлено в избранные", Toast.LENGTH_SHORT).show();
+        if(FirebaseAuth.getInstance().getCurrentUser() == null)
+        {
+            Intent intent = new Intent(this, Fourth_layer_Entrance.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            finish();
+        }else {
+
+            ImageView star = findViewById(R.id.Star);
+            star.setImageResource(R.drawable.staractiveall);
+            Toast.makeText(getApplicationContext(), "Добавлено в избранные", Toast.LENGTH_SHORT).show();
 
 
-        Log.d("text text", FirebaseAuth.getInstance().toString());
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance().userId;
-        DatabaseReference myRef = firebaseDatabase.getReference("key");
-        myRef.setValue(new Course(1, String.valueOf(1234) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "k", 2));
+            Log.d("text text", FirebaseAuth.getInstance().getCurrentUser().getUid());
+            String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = firebaseDatabase.getReference("Users//" + userId + "//favorite");
+            myRef.push().setValue(new Course(id_, sale_, title_, data_, level_, 0, text_, 0));
 
 
-        int item_id = getIntent().getIntExtra("courseId", 0);
-        Bucket.items_id.add(item_id);
+            int item_id = getIntent().getIntExtra("courseId", 0);
+            Bucket.items_id.add(item_id);
+        }
     }
 
     //----назад----//

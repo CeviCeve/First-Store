@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -29,6 +30,9 @@ public class Fourth_layer_Entrance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityFourthLayerEntranceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Log.d("texttext", "texttexttext");
+
         //setContentView(R.layout.activity_fourth_layer_entrance);
         //Button login = findViewById(R.id.login_btn);
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {

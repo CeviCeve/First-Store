@@ -9,6 +9,15 @@ public class Course {
     String sale;
     String text;
 
+    public Course(int id) {
+        this.id = id;
+    }
+
+    public Course(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
     public Course(){
 
     }

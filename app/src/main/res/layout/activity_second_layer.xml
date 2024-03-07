@@ -82,10 +82,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        android:background="@color/secondTitle"
+        android:id="@+id/bucketList"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:id="@+id/bucketList"
+        android:cacheColorHint="@color/white"
+        android:forceDarkAllowed="true"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

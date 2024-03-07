@@ -57,6 +57,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
 
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, new Pair<View, String>(holder.courseSale, "CourseName"));
 
+
                 intent.putExtra("courseBg", courses.get(position).getColor());
                 intent.putExtra("courseSale", courses.get(position).getSale());
                 intent.putExtra("courseLevel", courses.get(position).getLevel());

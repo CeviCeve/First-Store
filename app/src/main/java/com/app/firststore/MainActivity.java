@@ -80,11 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
     //----переход к избранному----//
     public void openSecond(View view){
-
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = firebaseDatabase.getReference("key");
-        myRef.setValue(new Course(1, String.valueOf(1234) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "k", 2));
-
         TextView textView = findViewById(R.id.cache);
         textView.setText(CacheMashine.setCache());
 
