@@ -1,5 +1,6 @@
 package com.app.firststore;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -15,8 +16,13 @@ import android.widget.Toast;
 import com.app.firststore.Model.Bucket;
 import com.app.firststore.Model.Course;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
+import com.google.firebase.database.ValueEventListener;
 
 public class Second_layer_course extends AppCompatActivity {
 
@@ -86,6 +92,58 @@ public class Second_layer_course extends AppCompatActivity {
             int item_id = getIntent().getIntExtra("courseId", 0);
             Bucket.items_id.add(item_id);
         }
+    }
+
+    //----купить----//
+    public void buyCourse(View view){
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = database.getReference("Users//"+userId+"/numCourses");
+        DatabaseReference money = database.getReference("Users//"+userId+"/balance");
+
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    Integer numCourses = dataSnapshot.getValue(Integer.class);
+                    // теперь у вас есть первое значение из Firebase
+
+                    money.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            Integer numBalanse = dataSnapshot.getValue(Integer.class);
+
+                            int numSale = Integer.parseInt(sale_);
+                            if(numBalanse < numSale){
+                                Toast.makeText(getApplicationContext(), "Недостаточно средств", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Integer percent;
+                                if(numCourses <=10){ percent = numCourses;}
+                                else if(numCourses>100){ percent = 9 + numCourses - (int)(numCourses * 0.75);}
+                                else{percent = 35;}
+
+                                databaseReference.setValue(numCourses+1);
+                                money.setValue(numBalanse-numSale+numSale*percent/100);
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            // обработка ошибок
+                        }
+                    });
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // обработка ошибок
+                }
+            });
+
+                //Log.d("ErrorData",courseSale.toString());
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     //----назад----//

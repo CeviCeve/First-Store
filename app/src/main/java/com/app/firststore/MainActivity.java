@@ -159,13 +159,13 @@ public static void money(TextView textView)
 
     public void reset(View view){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef1 = firebaseDatabase.getReference("Course");
+        DatabaseReference myRef1 = firebaseDatabase.getReference("Course/");
         myRef1.push().setValue(new Course(1, "200","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
         myRef1.push().setValue(new Course(2, "150","Разработка приложений на Java", "Качественно\nДоступно" ,"Начинающий",R.drawable.gradient_4, "a1",3));
         myRef1.push().setValue(new Course(3, "310","Unity для чайников", "Доступно" ,"Начинающий",R.drawable.gradient_5, "a1",1));
         myRef1.push().setValue(new Course(4, "666","Разработка приложений на петухоне", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_2, "a1",3));
         myRef1.push().setValue(new Course(5, "200","UnrealEngine 5 с помощью C++", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_1, "a1",1));
-        myRef1.push().setValue(new Course(1, "200","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
+        myRef1.push().setValue(new Course(1, "300","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
 
     }
     //----переход к чатам----//

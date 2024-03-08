@@ -45,7 +45,8 @@ public class Fourth_layer_account extends AppCompatActivity {
                 Integer percent;
 
                 if(numCourses <=10){ percent = numCourses;}
-                else { percent = 9 + numCourses - (int)(numCourses * 0.75);}
+                else if(numCourses>100){ percent = 9 + numCourses - (int)(numCourses * 0.75);}
+                else{percent = 35;}
 
                 if(username != null) {
                     Log.d("username", username);

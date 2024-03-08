@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.firststore.Model.Course;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,30 +29,33 @@ public class FourthLayer extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.cache);
         MainActivity.money(textView);
+        if(FirebaseAuth.getInstance().getCurrentUser() != null) {
 
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            FirebaseDatabase rootRef = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = rootRef.getReference("Users//" + userId);
 
-        FirebaseDatabase rootRef = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = rootRef.getReference("Users//" + userId);
+            myRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String username = snapshot.child("username").getValue(String.class);
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String username = snapshot.child("username").getValue(String.class);
+                    if (username != null) {
+                        Log.d("username", username);
 
-                if(username != null) {
-                    Log.d("username", username);
-
-                    TextView textView1 = (TextView) findViewById(R.id.UserName);
-                    textView1.setText(String.valueOf(username));
+                        TextView textView1 = (TextView) findViewById(R.id.UserName);
+                        textView1.setText(String.valueOf(username));
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+                }
+            });
+        }else{
+            Toast.makeText(getApplicationContext(), "Пройдите регистрацию", Toast.LENGTH_SHORT).show();
+        }
     }
     //------------------------нижнее меню------------------------//
     //----переход к главному меню----//

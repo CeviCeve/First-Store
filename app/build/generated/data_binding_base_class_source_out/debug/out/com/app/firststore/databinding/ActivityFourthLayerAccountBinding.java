@@ -21,6 +21,9 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView UserName;
+
+  @NonNull
   public final ImageView imageView10;
 
   @NonNull
@@ -30,7 +33,16 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
   public final ImageView imageView4;
 
   @NonNull
-  public final TextView text1;
+  public final TextView numCourses;
+
+  @NonNull
+  public final TextView percent;
+
+  @NonNull
+  public final TextView pochta;
+
+  @NonNull
+  public final TextView status;
 
   @NonNull
   public final TextView textView12;
@@ -39,25 +51,13 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
   public final TextView textView13;
 
   @NonNull
-  public final TextView textView14;
-
-  @NonNull
   public final TextView textView15;
-
-  @NonNull
-  public final TextView textView16;
 
   @NonNull
   public final TextView textView17;
 
   @NonNull
-  public final TextView textView18;
-
-  @NonNull
   public final TextView textView19;
-
-  @NonNull
-  public final TextView textView20;
 
   @NonNull
   public final TextView textView21;
@@ -66,25 +66,25 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
   public final TextView textView5;
 
   private ActivityFourthLayerAccountBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView10, @NonNull ImageView imageView13, @NonNull ImageView imageView4,
-      @NonNull TextView text1, @NonNull TextView textView12, @NonNull TextView textView13,
-      @NonNull TextView textView14, @NonNull TextView textView15, @NonNull TextView textView16,
-      @NonNull TextView textView17, @NonNull TextView textView18, @NonNull TextView textView19,
-      @NonNull TextView textView20, @NonNull TextView textView21, @NonNull TextView textView5) {
+      @NonNull TextView UserName, @NonNull ImageView imageView10, @NonNull ImageView imageView13,
+      @NonNull ImageView imageView4, @NonNull TextView numCourses, @NonNull TextView percent,
+      @NonNull TextView pochta, @NonNull TextView status, @NonNull TextView textView12,
+      @NonNull TextView textView13, @NonNull TextView textView15, @NonNull TextView textView17,
+      @NonNull TextView textView19, @NonNull TextView textView21, @NonNull TextView textView5) {
     this.rootView = rootView;
+    this.UserName = UserName;
     this.imageView10 = imageView10;
     this.imageView13 = imageView13;
     this.imageView4 = imageView4;
-    this.text1 = text1;
+    this.numCourses = numCourses;
+    this.percent = percent;
+    this.pochta = pochta;
+    this.status = status;
     this.textView12 = textView12;
     this.textView13 = textView13;
-    this.textView14 = textView14;
     this.textView15 = textView15;
-    this.textView16 = textView16;
     this.textView17 = textView17;
-    this.textView18 = textView18;
     this.textView19 = textView19;
-    this.textView20 = textView20;
     this.textView21 = textView21;
     this.textView5 = textView5;
   }
@@ -116,6 +116,12 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.UserName;
+      TextView UserName = ViewBindings.findChildViewById(rootView, id);
+      if (UserName == null) {
+        break missingId;
+      }
+
       id = R.id.imageView10;
       ImageView imageView10 = ViewBindings.findChildViewById(rootView, id);
       if (imageView10 == null) {
@@ -134,9 +140,27 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.text1;
-      TextView text1 = ViewBindings.findChildViewById(rootView, id);
-      if (text1 == null) {
+      id = R.id.numCourses;
+      TextView numCourses = ViewBindings.findChildViewById(rootView, id);
+      if (numCourses == null) {
+        break missingId;
+      }
+
+      id = R.id.percent;
+      TextView percent = ViewBindings.findChildViewById(rootView, id);
+      if (percent == null) {
+        break missingId;
+      }
+
+      id = R.id.pochta;
+      TextView pochta = ViewBindings.findChildViewById(rootView, id);
+      if (pochta == null) {
+        break missingId;
+      }
+
+      id = R.id.status;
+      TextView status = ViewBindings.findChildViewById(rootView, id);
+      if (status == null) {
         break missingId;
       }
 
@@ -152,21 +176,9 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView14;
-      TextView textView14 = ViewBindings.findChildViewById(rootView, id);
-      if (textView14 == null) {
-        break missingId;
-      }
-
       id = R.id.textView15;
       TextView textView15 = ViewBindings.findChildViewById(rootView, id);
       if (textView15 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView16;
-      TextView textView16 = ViewBindings.findChildViewById(rootView, id);
-      if (textView16 == null) {
         break missingId;
       }
 
@@ -176,21 +188,9 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView18;
-      TextView textView18 = ViewBindings.findChildViewById(rootView, id);
-      if (textView18 == null) {
-        break missingId;
-      }
-
       id = R.id.textView19;
       TextView textView19 = ViewBindings.findChildViewById(rootView, id);
       if (textView19 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView20;
-      TextView textView20 = ViewBindings.findChildViewById(rootView, id);
-      if (textView20 == null) {
         break missingId;
       }
 
@@ -206,9 +206,9 @@ public final class ActivityFourthLayerAccountBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityFourthLayerAccountBinding((ConstraintLayout) rootView, imageView10,
-          imageView13, imageView4, text1, textView12, textView13, textView14, textView15,
-          textView16, textView17, textView18, textView19, textView20, textView21, textView5);
+      return new ActivityFourthLayerAccountBinding((ConstraintLayout) rootView, UserName,
+          imageView10, imageView13, imageView4, numCourses, percent, pochta, status, textView12,
+          textView13, textView15, textView17, textView19, textView21, textView5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
