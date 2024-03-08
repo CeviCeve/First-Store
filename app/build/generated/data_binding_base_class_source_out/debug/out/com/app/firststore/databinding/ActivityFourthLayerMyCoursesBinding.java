@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.firststore.R;
@@ -24,12 +25,17 @@ public final class ActivityFourthLayerMyCoursesBinding implements ViewBinding {
   public final ImageView imageView10;
 
   @NonNull
+  public final RecyclerView recyclerCours;
+
+  @NonNull
   public final TextView textView5;
 
   private ActivityFourthLayerMyCoursesBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView10, @NonNull TextView textView5) {
+      @NonNull ImageView imageView10, @NonNull RecyclerView recyclerCours,
+      @NonNull TextView textView5) {
     this.rootView = rootView;
     this.imageView10 = imageView10;
+    this.recyclerCours = recyclerCours;
     this.textView5 = textView5;
   }
 
@@ -66,6 +72,12 @@ public final class ActivityFourthLayerMyCoursesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recyclerCours;
+      RecyclerView recyclerCours = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerCours == null) {
+        break missingId;
+      }
+
       id = R.id.textView5;
       TextView textView5 = ViewBindings.findChildViewById(rootView, id);
       if (textView5 == null) {
@@ -73,7 +85,7 @@ public final class ActivityFourthLayerMyCoursesBinding implements ViewBinding {
       }
 
       return new ActivityFourthLayerMyCoursesBinding((ConstraintLayout) rootView, imageView10,
-          textView5);
+          recyclerCours, textView5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

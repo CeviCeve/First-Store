@@ -1,0 +1,6 @@
+com.app.firststore.test.app-annotation-experimental-1.3.0-0 C:\Users\Professional\.gradle\caches\transforms-3\9ed3540d49c7dab22940a1c02e88974d\transformed\annotation-experimental-1.3.0\res
+com.app.firststore.test.app-core-1.5.0-1 C:\Users\Professional\.gradle\caches\transforms-3\c04c6d1078d1da3f4c69c3d1bdc4c42b\transformed\core-1.5.0\res
+com.app.firststore.test.app-androidTest-2 G:\FirstStore\app\build\generated\res\resValues\androidTest\debug
+com.app.firststore.test.app-mergeDebugAndroidTestResources-3 G:\FirstStore\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.app.firststore.test.app-mergeDebugAndroidTestResources-4 G:\FirstStore\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.app.firststore.test.app-merged_res-5 G:\FirstStore\app\build\intermediates\merged_res\debugAndroidTest

@@ -4,7 +4,6 @@ package com.app.firststore.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,9 +20,6 @@ import java.lang.String;
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final Button button;
 
   @NonNull
   public final TextView cache;
@@ -58,14 +54,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView textView3;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button button,
-      @NonNull TextView cache, @NonNull RecyclerView categoryRecycler,
-      @NonNull ConstraintLayout constraintLayout, @NonNull ImageView imageView,
-      @NonNull ImageView imageView5, @NonNull ImageView imageView6, @NonNull ImageView imageView7,
-      @NonNull ImageView imageView8, @NonNull RecyclerView recyclerCourse,
-      @NonNull TextView textView2, @NonNull TextView textView3) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView cache,
+      @NonNull RecyclerView categoryRecycler, @NonNull ConstraintLayout constraintLayout,
+      @NonNull ImageView imageView, @NonNull ImageView imageView5, @NonNull ImageView imageView6,
+      @NonNull ImageView imageView7, @NonNull ImageView imageView8,
+      @NonNull RecyclerView recyclerCourse, @NonNull TextView textView2,
+      @NonNull TextView textView3) {
     this.rootView = rootView;
-    this.button = button;
     this.cache = cache;
     this.categoryRecycler = categoryRecycler;
     this.constraintLayout = constraintLayout;
@@ -106,12 +101,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
-        break missingId;
-      }
-
       id = R.id.cache;
       TextView cache = ViewBindings.findChildViewById(rootView, id);
       if (cache == null) {
@@ -178,7 +167,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, button, cache, categoryRecycler,
+      return new ActivityMainBinding((ConstraintLayout) rootView, cache, categoryRecycler,
           constraintLayout, imageView, imageView5, imageView6, imageView7, imageView8,
           recyclerCourse, textView2, textView3);
     }

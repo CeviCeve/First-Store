@@ -1,0 +1,3 @@
+com.app.firststore.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

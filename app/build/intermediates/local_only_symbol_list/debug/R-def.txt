@@ -11,6 +11,7 @@ color appColor
 color background
 color black
 color button
+color dark
 color moreDark
 color red
 color secondTitle
@@ -24,6 +25,7 @@ drawable balance
 drawable button_buy
 drawable category
 drawable courses
+drawable fs_background
 drawable gradient_1
 drawable gradient_2
 drawable gradient_3
@@ -56,7 +58,6 @@ id UserName
 id bg1
 id bg2
 id bucketList
-id button
 id cache
 id cardView
 id categoryRecycler
@@ -93,6 +94,7 @@ id numCourses
 id password
 id percent
 id pochta
+id recyclerCours
 id recyclerCourse
 id regBtn
 id status
@@ -131,6 +133,9 @@ layout activity_second_layer_course
 layout activity_therd_layer
 layout category_item
 layout course_item
+mipmap fs
+mipmap fs_foreground
+mipmap fs_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 string Date

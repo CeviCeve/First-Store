@@ -1398,6 +1398,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -3045,6 +3046,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fs_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradient_1
@@ -3270,7 +3272,6 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id bucketList
-id button
 id buttonPanel
 id cache
 id cache_measures
@@ -3567,6 +3568,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerCours
 id recyclerCourse
 id regBtn
 id report_drawn
@@ -3938,6 +3940,9 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+mipmap fs
+mipmap fs_foreground
+mipmap fs_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
