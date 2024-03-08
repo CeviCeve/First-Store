@@ -13,4 +13,6 @@
     <color name="appColor">#1EB4A2</color>
     <color name="red">#DB0000</color>
     <color name="moreDark">#090909</color>
+    <color name="dark">#131313</color>
+
 </resources>

@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Second_layer_course extends AppCompatActivity {
 
-    int id_, color_, category_;
+    int id_, color_;
     String title_;
     String data_;
     String level_;
@@ -59,6 +59,7 @@ public class Second_layer_course extends AppCompatActivity {
         level_ = getIntent().getStringExtra("courseLevel");;
         sale_ = getIntent().getStringExtra("courseSale");;
         text_ = getIntent().getStringExtra("courseText");;
+        color_ = getIntent().getIntExtra("courseBg", 0);
 
         TextView textView = findViewById(R.id.cache);
         MainActivity.money(textView);
@@ -86,7 +87,7 @@ public class Second_layer_course extends AppCompatActivity {
 
             FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
             DatabaseReference myRef = firebaseDatabase.getReference("Users//" + userId + "//favorite");
-            myRef.push().setValue(new Course(id_, sale_, title_, data_, level_, 0, text_, 0));
+            myRef.push().setValue(new Course(id_, sale_, title_, data_, level_, color_ , text_, 0));
 
 
             int item_id = getIntent().getIntExtra("courseId", 0);
@@ -103,6 +104,7 @@ public class Second_layer_course extends AppCompatActivity {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference databaseReference = database.getReference("Users//" + userId + "/numCourses");
             DatabaseReference money = database.getReference("Users//" + userId + "/balance");
+            DatabaseReference myRef = database.getReference("Users//" + userId + "//Purchased");
 
             databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -130,6 +132,9 @@ public class Second_layer_course extends AppCompatActivity {
 
                                 databaseReference.setValue(numCourses + 1);
                                 money.setValue(numBalanse - numSale + numSale * percent / 100);
+                                Toast.makeText(getApplicationContext(), "Покупка совершена", Toast.LENGTH_SHORT).show();
+
+                                myRef.push().setValue(new Course(id_, sale_, title_, data_, level_, color_, text_, 0));
                             }
                         }
 

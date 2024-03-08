@@ -45,9 +45,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("fbAdd", "ds.getValue().toString()");
 
 
-        //startActivities(new Intent(this, Fourth_layer_money.class));
-        //Courses_repository.getAll();
-
         //----1----//
         List<Category> categoryList = new ArrayList<>();
         categoryList.add(new Category(1, "Движки"));
@@ -59,29 +56,6 @@ public class MainActivity extends AppCompatActivity {
         setCategoryRecycler(categoryList);
 
         //----2----//
-        int course1=200;
-        int course2=150;
-        int course3=500;
-        int course4=100;
-        int course5=500;
-
-
-
-
-        String a1 = "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems. Разработка ведётся сообществом, организованным через Java Community Process; язык и основные реализующие его технологии распространяются по лицензии GPL.";
-
-        /*courseList.add(new Course(1, String.valueOf(course1) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, a1, 2));
-        courseList.add(new Course(2, String.valueOf(course2) + " BYN","Разработка приложений на Java", "Качественно\nДоступно" ,"Начинающий",R.drawable.gradient_4, a1,3));
-        courseList.add(new Course(3, String.valueOf(course3) + " BYN","Unity для чайников", "Доступно" ,"Начинающий",R.drawable.gradient_5, a1,1));
-        courseList.add(new Course(4, String.valueOf(course4) + " BYN","Разработка приложений на петухоне", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_2, a1,3));
-        courseList.add(new Course(5, String.valueOf(course5) + " BYN","UnrealEngine 5 с помощью C++", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_1, a1,1));
-
-        fullList.addAll(courseList);*/
-
-        /*FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef1 = firebaseDatabase.getReference("Course");
-        myRef1.push().setValue(new Course(1, String.valueOf(course1) + " BYN","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, a1, 2));
-*/
         TextView textView = findViewById(R.id.cache);
 
         FirebaseDatabase rootRef = FirebaseDatabase.getInstance();
@@ -100,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
                 fullList.addAll(list);
                 courseList.addAll(list);
+
                 setCourseRecycler(courseList);
                 money(textView);
                 //Do what you need to do with your list
@@ -112,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
         };
         myRef.addValueEventListener(valueEventListener);
     }
+
+
+
 
     //----покаазывать кошелек----//
 public static void money(TextView textView)
@@ -160,12 +138,19 @@ public static void money(TextView textView)
     public void reset(View view){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef1 = firebaseDatabase.getReference("Course/");
-        myRef1.push().setValue(new Course(1, "200","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
-        myRef1.push().setValue(new Course(2, "150","Разработка приложений на Java", "Качественно\nДоступно" ,"Начинающий",R.drawable.gradient_4, "a1",3));
-        myRef1.push().setValue(new Course(3, "310","Unity для чайников", "Доступно" ,"Начинающий",R.drawable.gradient_5, "a1",1));
-        myRef1.push().setValue(new Course(4, "666","Разработка приложений на петухоне", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_2, "a1",3));
-        myRef1.push().setValue(new Course(5, "200","UnrealEngine 5 с помощью C++", "Быстро\nКачественно\nДоступно" ,"Продвинутый",R.drawable.gradient_1, "a1",1));
-        myRef1.push().setValue(new Course(1, "300","Рhotoshop", "Быстро\nКачественно\nДоступно" ,"Профессионал",R.drawable.gradient_6, "oiuytt", 2));
+
+        String a1 = "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems. Разработка ведётся сообществом, организованным через Java Community Process; язык и основные реализующие его технологии распространяются по лицензии GPL.";
+        String a2 = "Adobe Photoshop — многофункциональный растровый графический редактор, разрабатываемый и распространяемый компанией Adobe Systems. В основном работает с растровыми изображениями, однако имеет некоторые векторные инструменты. Продукт является лидером рынка в области коммерческих средств редактирования растровых изображений и наиболее известной программой разработчика.";
+        String a3 = "Unity — кроссплатформенная среда разработки компьютерных игр[3], разработанная американской компанией Unity Technologies. Unity позволяет создавать приложения, работающие на более чем 25 различных платформах, включающих персональные компьютеры, игровые консоли, мобильные устройства, интернет-приложения и другие[4]. Выпуск Unity состоялся в 2005 году и с того времени идёт постоянное развитие.";
+        String a4 = "Python  — высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью[19][20], ориентированный на повышение производительности разработчика, читаемости кода и его качества, а также на обеспечение переносимости написанных на нём программ[21]. Язык является полностью объектно-ориентированным в том плане, что всё является объектами[19]. Необычной особенностью языка является выделение блоков кода отступами[22]. Синтаксис ядра языка минималистичен, за счёт чего на практике редко возникает необходимость обращаться к документации[21]. Сам же язык известен как интерпретируемый и используется в том числе для написания скриптов";
+        String a5 = "Unreal Engine — игровой движок, разрабатываемый и поддерживаемый компанией Epic Games. Первой игрой на этом движке был шутер от первого лица Unreal, выпущенный в 1998 году. Хотя движок первоначально был предназначен для разработки шутеров от первого лица, его последующие версии успешно применялись в играх самых различных жанров, в том числе стелс-играх, файтингах, массовых многопользовательских ролевых онлайн-играх и многих других ";
+
+        myRef1.push().setValue(new Course(1, "200","Рhotoshop", "Высокие запросы\nКачественный подход\nДоступное объяснение" ,"Профессионал",R.drawable.gradient_6, a2, 2));
+        myRef1.push().setValue(new Course(2, "150","Разработка приложений на Java", "Высокие запросы\nКачественный подход\nДоступное объяснение" ,"Начинающий",R.drawable.gradient_4, a1,3));
+        myRef1.push().setValue(new Course(3, "310","Unity для чайников", "Высокие запросы\nКачественный подход\nДоступное объяснение" ,"Начинающий",R.drawable.gradient_5, a3,1));
+        myRef1.push().setValue(new Course(4, "666","Разработка приложений на петухоне", "Высокие запросы\nКачественный подход\nДоступное объяснение" ,"Продвинутый",R.drawable.gradient_2, a4,3));
+        myRef1.push().setValue(new Course(5, "200","UnrealEngine 5 с помощью C++", "Высокие запросы\nКачественный подход\nДоступное объяснение" ,"Продвинутый",R.drawable.gradient_1, a5,1));
+        myRef1.push().setValue(new Course(1, "300","Рhotoshop", "Высокие запросы\nКачественный подход\nДоступное объяснение" ,"Профессионал",R.drawable.gradient_6, a2, 2));
 
     }
     //----переход к чатам----//

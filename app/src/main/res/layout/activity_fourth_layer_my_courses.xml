@@ -7,6 +7,20 @@
     android:background="@color/background"
     tools:context=".Fourth_layer_my_courses">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCours"
+        android:layout_width="270dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/dark"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:listitem="@layout/course_item" />
+
     <ImageView
 
         android:id="@+id/imageView10"
