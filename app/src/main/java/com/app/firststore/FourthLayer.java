@@ -53,8 +53,6 @@ public class FourthLayer extends AppCompatActivity {
 
                 }
             });
-        }else{
-            Toast.makeText(getApplicationContext(), "Пройдите регистрацию", Toast.LENGTH_SHORT).show();
         }
     }
     //------------------------нижнее меню------------------------//
@@ -96,9 +94,16 @@ public class FourthLayer extends AppCompatActivity {
     //----переход к пополнению счета----//
     public void giveCache(View view){
         Log.d("text", "textextext");
-        Intent intent = new Intent(this, Fourth_layer_money.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startActivity(new Intent(this, Fourth_layer_Entrance.class));
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            Toast.makeText(getApplicationContext(), "Пройдите регистрацию", Toast.LENGTH_SHORT).show();
+        } else {
+
+            Intent intent = new Intent(this, Fourth_layer_money.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
     }
     //----переход к данным аккаунта----//
     public void accountLayer(View view){

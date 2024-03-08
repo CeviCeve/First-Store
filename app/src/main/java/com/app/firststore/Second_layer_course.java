@@ -96,13 +96,13 @@ public class Second_layer_course extends AppCompatActivity {
 
     //----купить----//
     public void buyCourse(View view){
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+        if(FirebaseAuth.getInstance().getCurrentUser() != null) {
 
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = database.getReference("Users//"+userId+"/numCourses");
-        DatabaseReference money = database.getReference("Users//"+userId+"/balance");
+            String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = database.getReference("Users//" + userId + "/numCourses");
+            DatabaseReference money = database.getReference("Users//" + userId + "/balance");
 
             databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -116,16 +116,20 @@ public class Second_layer_course extends AppCompatActivity {
                             Integer numBalanse = dataSnapshot.getValue(Integer.class);
 
                             int numSale = Integer.parseInt(sale_);
-                            if(numBalanse < numSale){
+                            if (numBalanse < numSale) {
                                 Toast.makeText(getApplicationContext(), "Недостаточно средств", Toast.LENGTH_SHORT).show();
                             } else {
                                 Integer percent;
-                                if(numCourses <=10){ percent = numCourses;}
-                                else if(numCourses>100){ percent = 9 + numCourses - (int)(numCourses * 0.75);}
-                                else{percent = 35;}
+                                if (numCourses <= 10) {
+                                    percent = numCourses;
+                                } else if (numCourses > 100) {
+                                    percent = 9 + numCourses - (int) (numCourses * 0.75);
+                                } else {
+                                    percent = 35;
+                                }
 
-                                databaseReference.setValue(numCourses+1);
-                                money.setValue(numBalanse-numSale+numSale*percent/100);
+                                databaseReference.setValue(numCourses + 1);
+                                money.setValue(numBalanse - numSale + numSale * percent / 100);
                             }
                         }
 
@@ -141,9 +145,12 @@ public class Second_layer_course extends AppCompatActivity {
                     // обработка ошибок
                 }
             });
-
-                //Log.d("ErrorData",courseSale.toString());
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }else{
+            Intent intent = new Intent(this, Fourth_layer_Entrance.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            finish();
+        }
     }
 
     //----назад----//
